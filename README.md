@@ -14,9 +14,9 @@ Il suffit de télécharger le fichier `pronotepy_monlycee.py` et de le mettre da
 import pronotepy
 from pronotepy_monlycee import ile_de_france
 
-client = pronotepy.Client('URL DE L'INSTANCE PRONOTE,
-                          username='NOM D'UTILISATEUR DE L'ENT,
-                          password='MOT DE PASSE DE L'ENT,
+client = pronotepy.Client("URL DE L'INSTANCE PRONOTE",
+                          username="NOM D'UTILISATEUR DE L'ENT",
+                          password="MOT DE PASSE DE L'ENT",
                           ent=ile_de_france)
 ```
 
@@ -29,8 +29,8 @@ client = pronotepy.Client('URL DE L'INSTANCE PRONOTE,
 import pronotepy
 from pronotepy.ent import ile_de_france
 
-client = pronotepy.Client('URL DE L'INSTANCE PRONOTE,
-                          username='xxxx.xxxx',
-                          password='*********',
+client = pronotepy.Client("URL DE L'INSTANCE PRONOTE",
+                          username="NOM D'UTILISATEUR DE L'ENT",
+                          password="MOT DE PASSE DE L'ENT",
                           ent=ile_de_france)
 ```
