@@ -4,12 +4,12 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="pronotepy",
-    version="2.13.1",
-    description='A wrapper for the pronote "API"',
+    name="pronotepy_monlycee",
+    version="2.13.2",
+    description='A wrapper for the pronote "API", patched to work with monlycee.net',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://www.github.com/bain3/pronotepy",
+    url="https://ww.github.com/Alg0v/pronotepy_monlycee",
     author="bain",
     license="MIT",
     packages=setuptools.find_packages(),
@@ -26,5 +26,5 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    package_data={"pronotepy": ["py.typed"]},
+    package_data={"pronotepy_monlycee": ["py.typed"]},
 )
