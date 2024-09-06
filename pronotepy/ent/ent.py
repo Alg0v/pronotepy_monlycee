@@ -134,7 +134,7 @@ ent_mayotte = partial(
     _open_ent_ng, url="https://mayotte.opendigitaleducation.com/auth/login"
 )
 
-ile_de_france = partial(_open_ent_ng, url="https://ent.iledefrance.fr/auth/login")
+ile_de_france = partial(monlycee_net)
 
 neoconnect_guadeloupe = partial(
     _open_ent_ng, url="https://neoconnect.opendigitaleducation.com/auth/login"

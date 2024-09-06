@@ -78,3 +78,59 @@ def ac_rennes(username: str, password: str) -> requests.cookies.RequestsCookieJa
             t = session.get(toutatice_auth, headers=HEADERS, params=params)
 
         return session.cookies
+
+    @typing.no_type_check
+def monlycee_net(
+    username: str,
+    password: str,
+    url: str = "https://psn.monlycee.net",
+    **opts: str,
+) -> requests.cookies.RequestsCookieJar:
+    """
+    ENT for monlycee.net with the new website
+
+    Parameters
+    ----------
+    username : str
+        username
+    password : str
+        password
+    url: str
+        url of the ent login page
+
+    Returns
+    -------
+    cookies : cookies
+        returns the ent session cookies
+    """
+    if not url:
+        raise ENTLoginError("Login URL is missing")
+
+    if not password:
+        raise ENTLoginError("Password is missing")
+
+    if not username:
+        raise ENTLoginError("Username is missing")
+
+    print(f"[ENT {url}] Logging in with {username}")
+
+    # ENT Connection
+    with requests.Session() as session:
+        response = session.get(url, headers=HEADERS)
+
+        soup = BeautifulSoup(response.text, "html.parser")
+        form = soup.find(id="kc-form-login")
+
+        if form is None:
+            raise ENTLoginError("Login form is missing")
+
+        payload = {"username": username, "password": password}
+
+        r = session.post(form.get("action"), data=payload, headers=HEADERS)
+
+        soup = BeautifulSoup(r.text, "html.parser")
+        username_input = soup.find(id="username")
+        if username_input is not None and username_input.get("aria-invalid") == "true":
+            raise ENTLoginError("Username / Password is invalid")
+
+        return session.cookies
