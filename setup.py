@@ -10,7 +10,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://ww.github.com/Alg0v/pronotepy_monlycee",
-    author="bain",
+    author="Alg0v",
     license="MIT",
     packages=setuptools.find_packages(),
     zip_safe=False,
