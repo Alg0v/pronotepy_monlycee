@@ -79,7 +79,8 @@ def ac_rennes(username: str, password: str) -> requests.cookies.RequestsCookieJa
 
         return session.cookies
 
-    @typing.no_type_check
+
+@typing.no_type_check
 def monlycee_net(
     username: str,
     password: str,
