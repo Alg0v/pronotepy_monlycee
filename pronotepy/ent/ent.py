@@ -13,6 +13,8 @@ from .generic_func import (  # type: ignore
     _simple_auth,
 )
 
+from .complex_ent import monlycee_net
+
 """CAS"""
 
 cas_arsene76 = partial(
