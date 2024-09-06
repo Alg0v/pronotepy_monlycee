@@ -1,8 +1,8 @@
 # PronotePY MonLycee
 
-Ceci est une version patchée de PronotePY qui permet de se connecter avec le nouvel ENT MonLycee.
+Ceci est une version patchée de PronotePY qui permet de se connecter avec le nouveau site de MonLycee.
 
-Le partial pour l'ile de france a été modifié puisque cet ENT utilise désormais le nouvel ENT MonLycee.
+Le partial pour l'ile de france a été modifié puisque cet ENT utilise désormais le nouveau site de MonLycee.
 
 **Aucune autre modification n'a été faite sur PronotePy**
 
